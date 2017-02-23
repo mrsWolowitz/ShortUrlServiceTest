@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrlServiceTest", "ShortUrlServiceTest\ShortUrlServiceTest.csproj", "{1E5F9ED6-BB7D-4AC2-AB2B-A98442EFD7B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrlService.Data", "ShortUrlService.Data\ShortUrlService.Data.csproj", "{E26AA731-78D6-46F7-9BF9-2C461607F438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrlService.Model", "ShortUrlService.Model\ShortUrlService.Model.csproj", "{E5BEB49D-69B4-4A41-B35C-A0F465DBEEB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrlServiceService.Test", "ShortUrlService.Model.Test\ShortUrlServiceService.Test.csproj", "{94294E7D-4409-42EA-AE84-D8DA500D33A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrlService.Service", "ShortUrlService.Service\ShortUrlService.Service.csproj", "{1A16EC73-570C-4E64-BC44-346A2D7E02C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrlServiceWeb", "ShortUrlServiceWeb\ShortUrlServiceWeb.csproj", "{B6CCB06B-80F5-4BAC-B030-BD6F84F2CBB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrlServiceWeb.Tests", "ShortUrlServiceWeb.Tests\ShortUrlServiceWeb.Tests.csproj", "{A2A45F3E-D4ED-47C3-BD7F-4B3DC5307DDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +21,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1E5F9ED6-BB7D-4AC2-AB2B-A98442EFD7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E5F9ED6-BB7D-4AC2-AB2B-A98442EFD7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E5F9ED6-BB7D-4AC2-AB2B-A98442EFD7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E5F9ED6-BB7D-4AC2-AB2B-A98442EFD7B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E26AA731-78D6-46F7-9BF9-2C461607F438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E26AA731-78D6-46F7-9BF9-2C461607F438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E26AA731-78D6-46F7-9BF9-2C461607F438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E26AA731-78D6-46F7-9BF9-2C461607F438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5BEB49D-69B4-4A41-B35C-A0F465DBEEB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BEB49D-69B4-4A41-B35C-A0F465DBEEB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BEB49D-69B4-4A41-B35C-A0F465DBEEB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BEB49D-69B4-4A41-B35C-A0F465DBEEB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94294E7D-4409-42EA-AE84-D8DA500D33A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94294E7D-4409-42EA-AE84-D8DA500D33A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94294E7D-4409-42EA-AE84-D8DA500D33A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94294E7D-4409-42EA-AE84-D8DA500D33A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A16EC73-570C-4E64-BC44-346A2D7E02C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A16EC73-570C-4E64-BC44-346A2D7E02C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A16EC73-570C-4E64-BC44-346A2D7E02C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A16EC73-570C-4E64-BC44-346A2D7E02C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6CCB06B-80F5-4BAC-B030-BD6F84F2CBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CCB06B-80F5-4BAC-B030-BD6F84F2CBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CCB06B-80F5-4BAC-B030-BD6F84F2CBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6CCB06B-80F5-4BAC-B030-BD6F84F2CBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A45F3E-D4ED-47C3-BD7F-4B3DC5307DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A45F3E-D4ED-47C3-BD7F-4B3DC5307DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A45F3E-D4ED-47C3-BD7F-4B3DC5307DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A45F3E-D4ED-47C3-BD7F-4B3DC5307DDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
