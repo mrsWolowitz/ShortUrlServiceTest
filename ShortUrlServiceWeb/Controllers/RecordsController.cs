@@ -67,7 +67,7 @@ namespace ShortUrlServiceWeb.Controllers
 
 
         // POST api/records
-        public void Post([FromBody]HistoryRecordViewModel viewModelHistoryRecord)
+        public HistoryRecordViewModel Post([FromBody]HistoryRecordViewModel viewModelHistoryRecord)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,9 @@ namespace ShortUrlServiceWeb.Controllers
                 historyRecord.UrlShort = $"{Request.RequestUri.Authority}/Home/Record/{hash}";
                 historyRecordService.UpdateHistoryRecord(historyRecord);
                 historyRecordService.SaveHistoryRecord();
-                }
+                viewModelHistoryRecord = Mapper.Map<HistoryRecord, HistoryRecordViewModel>(historyRecord);
+            }
+            return viewModelHistoryRecord;
         }
     }
 }

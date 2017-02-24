@@ -18,7 +18,7 @@
          generate.success(function (d) {
              $scope.success = "Ссылка добавлена";
              $scope.error = null;
-            getAll();
+             $scope.urlLong = d.UrlShort;
         }).error (function (error) {
             $scope.error = "Произошла ошибка при генерации короткой ссылки";
             $scope.success = null;
