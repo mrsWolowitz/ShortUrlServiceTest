@@ -8,13 +8,27 @@
     <div id="tbl" ng-controller="APIController">
         <div class="alert alert-danger animate-show" role="alert" ng-show="error != null">{{ error }} </div>
         <div class="alert alert-success animate-show" role="alert" ng-show="success != null">{{ success }}</div>
-        <div class="form-group">
-            <label for="urlLong">Генератор коротких ссылок</label>
-            <input type="url" class="form-control" id="urlLong" placeholder="Вставьте ссылку" [required="url" ] data-ng-model="urlLong" />
-        </div>
-        <button type="button" class="btn btn-default" data-ng-click="generate();">Генерировать</button>
+        <form name="mainform">
+            <div class="form-group">
+                <label for="urlLong">Длинная ссылка:</label>
+                <input name ="urlLongInput" type="url" class="form-control" id="urlLong" placeholder="Вставьте ссылку" [required="url" ] data-ng-model="urlLong" />
+                <div role="alert">
+                    <span class="error" ng-show="mainform.urlLongInput.$error.url">
+                        В поле введена не ссылка!
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default" data-ng-click="generate();">Генерировать</button>
+            </div>
+            <div class="form-group">
+                <label for="urlLong">Короткая ссылка:</label>
+                <input type="url" class="form-control" id="urlShort" placeholder="" data-ng-model="urlShort" />
+            </div>
+        </form>
     </div>
 </div>
+
 
     
 

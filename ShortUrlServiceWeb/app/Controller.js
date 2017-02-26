@@ -8,7 +8,7 @@
          }, function (error) {
              console.error("Произошла ошибка при получении данных")
          })
-    }
+     }
 
      $scope.generate = function () {
         var longUrl = {
@@ -18,13 +18,13 @@
          generate.success(function (d) {
              $scope.success = "Ссылка добавлена";
              $scope.error = null;
-             $scope.urlLong = d.UrlShort;
+             $scope.urlShort = d.UrlShort;
         }).error (function (error) {
             $scope.error = "Произошла ошибка при генерации короткой ссылки";
             $scope.success = null;
         });
-    };
-})
+     };
+});
 
 
 

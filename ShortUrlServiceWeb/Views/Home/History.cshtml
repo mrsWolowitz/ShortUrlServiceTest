@@ -7,23 +7,23 @@
 
 <body data-ng-app="APIModule" ng-controller="APIController">
     <div class="alert alert-danger animate-show" role="alert" ng-show="error != null">{{ error }} </div>
-                <table class="table table-striped">
+               <table class="table table-striped">
                     <tr>
                         <th>Короткая ссылка</th>
                         <th>Оригинальная ссылка</th>
                         <th>Дата создания</th>
                         <th>Количество переходов</th>
                     </tr>
-                    <tbody data-ng-repeat="item in items">
+                    <tbody data-ng-repeat="item in items | orderBy: '-CreateDate'">
                         <tr>
                             <td>{{item.UrlShort}}</td>
                             <td>{{item.UrlLong}}</td>
-                            <td>{{item.CreateDate | date:'MM/dd/yyyy h:mm'}}</td>
+                            <td>{{item.CreateDate | date:'dd/MM/yyyy h:mma'}}</td>
                             <td>{{item.HitCount}}</td>
                         </tr>
                     </tbody>
                 
-                   </table>   
+                   </table>  
 </body>
 
 
