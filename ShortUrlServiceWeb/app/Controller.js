@@ -1,30 +1,27 @@
-﻿app.controller('APIController', function ($scope, APIService) {
+﻿app.controller('APIController', ["$scope", "APIService", function ($scope, APIService) {
     getAll();
 
-     function getAll() {
+    function getAll() {
         var servCall = APIService.getHistory();
-         servCall.then(function (d) {
-             $scope.items = d.data;
-         }, function (error) {
-             console.error("Произошла ошибка при получении данных")
-         })
-     }
+        servCall.then(function (d) {
+            $scope.items = d.data;
+        }, function (error) {
+            console.error("Произошла ошибка при получении данных")
+        })
+    }
 
-     $scope.generate = function () {
+    $scope.generate = function () {
         var longUrl = {
-            UrlLong: $scope.urlLong            
+            UrlLong: $scope.urlLong
         };
         var generate = APIService.generateUrl(longUrl);
-         generate.success(function (d) {
-             $scope.success = "Ссылка добавлена";
-             $scope.error = null;
-             $scope.urlShort = d.UrlShort;
-        }).error (function (error) {
+        generate.success(function (d) {
+            $scope.success = "Ссылка добавлена";
+            $scope.error = null;
+            $scope.urlShort = d.UrlShort;
+        }).error(function (error) {
             $scope.error = "Произошла ошибка при генерации короткой ссылки";
             $scope.success = null;
         });
-     };
-});
-
-
-
+    };
+}]);

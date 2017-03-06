@@ -1,4 +1,4 @@
-﻿app.service("APIService", function ($http) {
+﻿app.service("APIService", ['$http', function ($http) {
     this.getHistory = function () {
         return $http.get("api/records")
     }
@@ -10,4 +10,4 @@
             url: 'api/records'
         });
     }
-});
+}]);
